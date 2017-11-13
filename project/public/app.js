@@ -16,9 +16,20 @@ context.strokeRect(0, 0, width, height)
 context.beginPath();
 context.moveTo(100, 300);
 //start of bezier curve drawing;
-context.bezierCurveTo(200, 250, 300, 250, 600, 240);
+//cutting edge Curve Points
+var cpBX1 = 200
+var cpBY1 = 250
+var cpBX2 = 300
+var cpBY2 = 250
+//top edge Curve Points
+var cpTX1 = 200
+var cpTY1 = 320
+var cpTX2 = 150
+var cpTY2 = 320
+
+context.bezierCurveTo(cpBX1, cpBY1, cpBX2, cpBY2, 600, 240);
 context.lineTo(620, 330)
-context.bezierCurveTo(200, 320, 150, 320, 100, 300)
+context.bezierCurveTo(cpTX1, cpTY1, cpTX2, cpTY2, 100, 300)
 
 
 //end drawing
